@@ -83,7 +83,7 @@ cmd1 (download and execute cmd2)
 
 * reads the obfuscated DLL injection script from another reg key, decodes it with the hardcoded key stored in the loader and invokes the script (see **DLL Injection Script**)
 
-* assembled powershell loader in file **sb4-embedded.ps1**, built by ***sb4.ps1**
+* assembled powershell loader in file **sb4-embedded.ps1**, built by **sb4.ps1**
 
 ### If the machine is a Windows 10 workstation...
 
