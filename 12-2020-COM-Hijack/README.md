@@ -166,32 +166,40 @@ See **COM Key Linking (with TreatAs)** in this [article](https://bohops.com/2018
 # Registry IOCs...
 
 * hk(lm|cu):\software\classes
+
   * (Default): full path to this script
 
 * hk(lm|cu):\software\classes\\<random_GUID_1>
+
   * (Default): <random_GUID_1>
 
 * hk(lm|cu):\software\classes\\<random_GUID_1>\CLSID
+
   * (Default): <random_GUID_0>
 
 * hk(lm|cu):\software\classes\CLSID\\<random_GUID_0>\VersionIndependentProgID
+
   * (Default): <random_GUID_1>
   * <last_4_chars_of_GUID_0>: obfuscated DLL
   * <first_4_chars_of_GUID_0>: obfuscated decode key
 
 * hk(lm|cu):\software\classes\CLSID\\<random_GUID_0>\ProgID
+
   * (Default): <random_GUID_1>
   * <last 4 chars of random GUID 0>: obfuscated DLL injection script
 
 * hk(lm|cu):\software\classes\CLSID\\<random_GUID_0>\LocalServer
+
   * (Default): DLL injection script loader
 
-### If this process is running as Local Administrator
+### If the process is running as Local Administrator
 
 * hklm:\software\classes\CLSID\\<random_GUID_3>\TreatAs
+
   * (Default): <random_GUID_0>
 
-### If this process is NOT running as Local Administrator
+### If the process is NOT running as Local Administrator
 
 * hkcu:\software\classes\CLSID\\<COM_hijacked_task_GUID>\TreatAs
+
   * (Default): <random_GUID_0>
