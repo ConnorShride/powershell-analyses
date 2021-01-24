@@ -4,7 +4,7 @@ Sets multiple registry keys/properties utilizing random GUIDs. Up to 3 random GU
 
 Registry keys are expressed as "hk(lm|cu):\..." becuase the script will set keys in the "Local Machine" hive if it's running as admin, and "Current User" hive if not.
 
-**For cleanliness, each function in cmd3.ps1 that is used is decoded and separated out into its own file.**
+**Each function in cmd3.ps1 that is used is decoded and separated out into its own file.**
 
 # Function Call Chain
 <pre>
