@@ -1,3 +1,9 @@
+**Threat Actor**
+
+The group behind this PowerShell is tracked by Maniant under UNC2529. They've called this PowerShell DOUBLEDROP. See the article here for a full description of the attack chain and related malware https://www.fireeye.com/blog/threat-research/2021/05/unc2529-triple-double-trifecta-phishing-campaign.html. Note that there may be discrepencies in our respective analyses, as the malware may have evolved over the few months between them. This analysis was finished in January while FireEye's analysis of the whole attack chain was posted in May. I also could be getting some parts completely wrong :)
+
+**TLDR**
+
 The PowerShell pulled down from meows://sun-city-cafe[.]com/update.dat (**cmd3.ps1**) writes more PowerShell code to load and run a DLL via reflective DLL injection, and installs persistence via COM Object Hijacking or installing a scheduled task with a COM handler. Performs the DLL injection immediately at the end of the script as well as via the installed persistence mechanisms.
 
 Sets multiple registry keys/properties utilizing random GUIDs. Up to 3 random GUIDs may be used that will differ each time this PowerShell is run, so the exact IOCs in the registry will vary in each instance. These GUIDs are expressed as "random_GUID_X".
